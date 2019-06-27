@@ -1,0 +1,152 @@
+define
+
+
+subscription sub relation,
+     relates provider,
+     relates customer,
+     has person_id,
+     has date-started,
+     has service_type,
+     has postpaid_type;
+
+company sub entity,
+      plays provider,
+      has name;
+
+person sub entity,
+      plays customer,
+      plays caller,
+      plays callee,
+      has first-name,
+      has last-name,
+      has phone-number,
+      has age,
+      has gender,
+      has is-customer;
+
+customer_address sub entity,
+      plays caller-residence,
+      plays callee-residence,
+      has address_id,
+      has street,
+      has barangay,
+      has town,
+      has province,
+      has region,
+      has address_type;
+   
+cellsite_location sub entity,
+      has cellsite-name,
+      has CN-barangay,
+      has CN-town,
+      has CN-province,
+      has CN-region,
+      plays caller-cellsite,
+      plays callee-cellsite;
+
+call sub relation,
+     relates caller,
+     relates callee,
+     relates caller-cellsite,
+     relates callee-cellsite,
+     relates caller-residence,
+     relates callee-residence,
+     has started-at,
+     has duration;
+
+household sub relation,
+     relates caller-cellsite,
+     relates callee-cellsite,
+     relates caller-residence,
+     relates callee-residence;
+
+mutual-household1 sub rule,
+
+	when {
+		    (caller: $customer, caller-residence: $caller-residence, callee: $callee, callee-cellsite: $callee-cellsite) isa call;
+		    $caller-residence == $caller-cellsite;
+       
+	}, then {
+		        (caller-residence: $caller-residence, callee-cellsite: $callee-cellsite) isa household;
+        
+    };
+    
+ mutual-household2 sub rule,   
+    when {
+            (caller: $caller, caller-cellsite: $caller-cellsite, callee: $customer1, callee-residence: $callee-residence) isa call;
+        $callee-cellsite == $callee-residence;
+   }, then {
+            (caller-cellsite: $caller-cellsite, callee-residence: $callee-residence) isa household;
+   
+   };
+
+	
+
+reward sub relation,
+      relates customer,
+      relates provider,
+      has reward_type,
+      has date-availed,
+      has points_needed,
+      has description;
+
+
+
+name sub attribute,
+    datatype string;
+started-at sub attribute,
+	datatype date;
+duration sub attribute,
+	datatype long;
+first-name sub attribute,
+	datatype string;
+last-name sub attribute,
+	datatype string;
+phone-number sub attribute,
+	datatype string;
+age sub attribute,
+	datatype string;
+is-customer sub attribute,
+	datatype boolean;
+cellsite-name sub attribute,
+    datatype string;
+address_type sub attribute,
+    datatype string;
+town sub attribute,
+    datatype string;
+province sub attribute,
+    datatype string;
+region sub attribute,
+    datatype string;
+reward_type sub attribute,
+    datatype string;
+date-availed sub attribute,
+    datatype date;
+service_type sub attribute,
+    datatype string;
+date-started sub attribute,
+    datatype string;
+gender sub attribute,
+    datatype string;
+postpaid_type sub attribute,
+    datatype string;
+points_needed sub attribute,
+    datatype long;
+description sub attribute,
+    datatype string;
+person_id sub attribute,
+    datatype string;
+street sub attribute,
+    datatype string;
+barangay sub attribute,
+    datatype string;
+CN-town sub attribute,
+    datatype string;
+CN-barangay sub attribute,
+    datatype string;
+CN-province sub attribute,
+    datatype string;
+CN-region sub attribute,
+    datatype string;
+address_id sub attribute,
+    datatype long;

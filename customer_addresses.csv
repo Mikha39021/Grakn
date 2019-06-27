@@ -1,0 +1,24 @@
+company_name,person_id,address_type,address_id,house_no,bldg name,street,barangay,town,province,region
+Telecom,0917-2849660931,home,139,20,,P Zamora,Libertad,Pasay,Metro Manila,NCR
+Telecom,0917-6526588656,home,139,20,,P Zamora,Libertad,Pasay,Metro Manila,NCR
+Telecom,0917-3842138375,home,139,20,,P Zamora,Libertad,Pasay,Metro Manila,NCR
+Telecom,0917-3546536714,office,124,7117,,Kundiman,Sampaloc,Manila,Metro Manila,NCR
+Telecom,0917-6764389638,office,134,11,Uptown Mall Tower 3,,Bonifacio Global City,Taguig,Metro Manila,NCR
+Telecom,0917-7037102590,home,155,25,,,Banadero,Calamba,Laguna,CALABARZON
+Telecom,0917-3346724633,home,123,156,,P. Torres,Marawoy,Lipa,Batangas,CALABARZON
+Telecom,0917-7778924869,home,120,16,,,Aguinaldo Highway,Bacoor,Cavite,CALABARZON
+Telecom,0917-9249148926,home,199,22,,Quezon ,Isok,Boac,Marinduque,MIMAROPA
+Telecom,0917-4837294759,home,201,84,,Gen. Luna,Poblacio 39,Infanta,Quezon,CALABARZON
+Telecom,0917-7132300234,office,301,48,,P Burgos,Rizal Avenue,San Pablo,Laguna,CALABARZON
+Telecom,0917-3744765568,office,344,37,,Quezon,Rizaliana,Mauban,Quezon,CALABARZON
+Telecom,0917-1219295827,office,167,75,,P. Domingo,Carmona,Makati,Metro Manila,NCR
+Telecom,0917-3409007083,office,167,75,,P. Domingo,Carmona,Makati,Metro Manila,NCR
+Telecom,0917-5943227735,office,167,75,,P. Domingo,Carmona,Makati,Metro Manila,NCR
+Telecom,0917-4706570971,office,356,45,,Quezon ,Isok,Boac,Marinduque,MIMAROPA
+Telecom,0917-8057466282,home,299,12,,Quezon ,Isok,Boac,Marinduque,MIMAROPA
+Telecom,0917-2607477866,home,544,440,,Antonio Arnaiz,Libertad,Pasay,Metro Manila,NCR
+Telecom,0917-4999667477,home,100,21,,,Malibay,Pasay,Metro Manila,NCR
+Telecom,0917-3782925182,office,188,7114,,Kundiman,Sampaloc,Manila,Metro Manila,NCR
+Telecom,0917-2484976705,office,188,7114,,Kundiman,Sampaloc,Manila,Metro Manila,NCR
+Telecom,0917-6371159241,office,178,8,,Rodriguez,Parola,Cainta,Rizal,CALABARZON
+Telecom,0917-5598318355,office,160,,Cmvc Plaza,,Cogeo,Antipolo,Rizal,CALABARZON
